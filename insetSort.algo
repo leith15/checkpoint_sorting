@@ -1,0 +1,38 @@
+ Procedure insertionSort( VAR tab : ARRAY-OF Integer[] ,  n : Integer)  
+  VAR : i,j,key : Integer;
+
+  BEGIN
+
+   For i FROM 0 TO n-1 STEP 1 DO
+
+  BEGIN
+  
+     key := tab[i];  
+      j := i - 1;  
+  
+// moving the elements that are greater than key 
+
+    while (j >= 0 OR  tab[j] > key) 
+      BEGIN
+       tab[j + 1] := tab[j];  
+       j := j - 1;  
+      END-WHILE
+
+
+    tab[j + 1] := key;  
+ 
+
+  END-FOR
+END
+
+
+
+ALGORITHM SORT
+VAR
+    tab: ARRAY-OF Integer[10];
+
+BEGIN
+   
+ tab[] = { 12, 11, 13, 5, 6 }; 
+ insertionSort(tab,tab.length);  
+END
